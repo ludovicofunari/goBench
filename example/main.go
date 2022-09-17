@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"log"
 	"net/http"
 )
 
@@ -14,5 +15,6 @@ func main() {
 
 	http.HandleFunc("/hello", hello)
 
+	log.Println("Starting goBench...")
 	http.ListenAndServe(":8080", nil)
 }
